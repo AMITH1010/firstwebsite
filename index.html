@@ -339,14 +339,13 @@
             document.getElementById('main-page').classList.add('fade-in');
         }
 
-        function downloadPDF(subjectCode, year) {
-            // REPLACE THIS SECTION FOR REAL PDF DOWNLOADS
-            // For demo purposes, we'll show an alert
-            alert(`Downloading ${subjectCode} ${year} Question Paper...\n\nNote: In a real implementation, this would download the actual PDF file.`);
-            
-            // UNCOMMENT THE LINE BELOW AND REPLACE WITH YOUR ACTUAL PDF PATH
-            // window.open(`/pdfs/${subjectCode}_${year}.pdf`, '_blank');
-        }
+      function downloadPDF(subjectCode, year) {
+    const link = document.createElement('a');
+    link.href = 'English_English.pdf'; // dummy file
+    link.download = `${subjectCode}_${year}.pdf`;
+    link.click();
+}
+
 
         // Add smooth scrolling and animations
         document.addEventListener('DOMContentLoaded', function() {
